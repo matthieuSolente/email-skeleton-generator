@@ -1,4 +1,4 @@
-# email-skeleton-generator
+# Email Skeleton Generator
 A generator to quickly create a basic email template.
 
 
