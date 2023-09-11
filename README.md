@@ -8,4 +8,4 @@ This generator allows you to start from a clean email skeleton. You have the opt
 
 Input fields are used to define a title, a preheader, the language, a background color.
 
-A selection field allows you to select the clients and messaging platforms for which CSS targeting is possible. The information is pulled from the website [howtotargetemail](https://www.howtotarget.email/): a collection of participatory email development techniques to distinguish customers and email platforms based on Mark Robbins' research.
+A selection field allows you to select the clients and messaging platforms for which CSS targeting is possible. The information is pulled from the website [howtotargetemail](https://www.howtotarget.email/): _a collection of participatory email development techniques to distinguish customers and email platforms based on Mark Robbins' research._
