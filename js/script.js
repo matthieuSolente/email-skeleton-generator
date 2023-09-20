@@ -91,7 +91,7 @@ function safe_tags_replace(str) {
 
 var component =[];
 var component_list = [];
-	var lang, title,preheader,width,bgColor,darkmodeMeta,darkmodeRoot,darkmodeCss, linkReset,one63,airmail,androidV23,applemail10,applemail12,applemail8,applemailipad,comcast,
+	var lang, title,preheader,width,bgColor,showHide,darkmodeMeta,darkmodeRoot,darkmodeCss, linkReset,one63,airmail,androidV23,applemail10,applemail12,applemail8,applemailipad,comcast,
 	edison,edisonandroid,edisonios,freenet,freenet2,gmail,gmailmobile,gmailandroid,ios10,
 	ios13,ios15,libero,newton,nine,notes,openxchange,outlook,outlookdark,
 	outlookmobile,outlookmobile2,outlookmac,outlookpwa,outlookweb,samsung4,samsung5,sapo,
@@ -124,6 +124,35 @@ function build_email() {
 				darkmodeMeta = '';
 				darkmodeRoot ='';
 				darkmodeCss = '';
+		};
+		if($('#showHide').is(':checked')){
+			showHide ='<style id="showHide">\n'
+					+'.your-mobile-class {\n'
+					+'	display: none !important;\n'
+					+'	max-height: none !important;	\n'
+					+'	mso-hide: all !important;\n'
+					+'	height: 0 !important;\n'
+					+'}\n'
+					+'</style>\n'
+					+'<style>\n'
+					+'@media screen and (max-width:'+width+') {\n'
+					+'	.your-desktop-class {\n'
+					+'  		display: none !important;\n'
+					+'  		height: 0 !important;\n'
+					+'	}\n'
+					+'	.your-mobile-class {\n'
+					+'	  display: block !important;\n'
+					+'	  width: auto !important;\n'
+					+'	  max-height: none !important;\n'
+					+'	  overflow: visible !important;\n'
+					+'	  height: 100% !important;\n'
+					+'	}\n'
+					+'}\n'
+					+'</style>\n'
+
+		}else{
+				showHide = '';
+		
 		};
 
 		if($('#linkReset').is(':checked')){
@@ -717,7 +746,6 @@ function build_email() {
 		+'  height: 100% !important;\n'
 		+'  width: 100% !important;\n'
 		+'}\n'
-		+'/* center email on Android 4.4 - margin reset */\n'
 		+'div[style*="margin: 16px 0"] {\n'
 		+'  margin: 0 !important;\n'
 		+'}\n'
@@ -734,43 +762,10 @@ function build_email() {
 		+'  mso-table-lspace: 0;\n'
 		+'  mso-table-rspace: 0;\n'
 		+'}\n'
-		+'/* La poste hack*/\n'
-		+'h2,\n'
-		+'h3 {\n'
-		+'  padding: 0;\n'
-		+'  margin: 0;\n'
-		+'  border: 0;\n'
-		+'  background: none;\n'
-		+'}\n'
 		+'</style>\n'
-		+''+darkmodeCss+linkReset+one63+airmail+androidV23+applemail10+applemail12+applemail8+applemailipad+comcast+edison+edisonandroid+edisonios+freenet+freenet2+gmail+gmailmobile+gmailandroid+ios10+ios13+ios15+libero+newton+nine+notes+openxchange+outlook+outlookdark+outlookmobile+outlookmobile2+outlookmac+outlookpwa+outlookweb+samsung4+samsung5+sapo+seznam+spark+sparkapps+superhuman+thunderbird+windowsphone+windowsphone2+yahoo+yahoo2+yahoo3+'\n'
-		+'<style>\n'
-		+'  .m-content {\n'
-		+'    display: none !important;\n'
-		+'    max-height: none !important;\n'
-		+'    mso-hide: all !important;\n'
-		+'    height: 0 !important;\n'
-		+'  }\n'
-		+'</style>\n'
-		+'<style>\n'
-		+'  @media screen and (max-width: '+width+'px) {\n'
-		+'    .d-content {\n'
-		+'      display: none !important;\n'
-		+'      height: 0 !important;\n'
-		+'    }\n'
-		+'    .m-content {\n'
-		+'      display: block !important;\n'
-		+'      width: auto !important;\n'
-		+'      max-height: none !important;\n'
-		+'      overflow: visible !important;\n'
-		+'      height: 100% !important;\n'
-		+'    }\n'
-		+'    /*SPECIFIC CSS: BEGIN*/\n'
-		+'    /*SPECIFIC CSS: END*/\n'
-		+'  }\n'
-		+'</style>\n'
+		+''+darkmodeCss+linkReset+showHide+one63+airmail+androidV23+applemail10+applemail12+applemail8+applemailipad+comcast+edison+edisonandroid+edisonios+freenet+freenet2+gmail+gmailmobile+gmailandroid+ios10+ios13+ios15+libero+newton+nine+notes+openxchange+outlook+outlookdark+outlookmobile+outlookmobile2+outlookmac+outlookpwa+outlookweb+samsung4+samsung5+sapo+seznam+spark+sparkapps+superhuman+thunderbird+windowsphone+windowsphone2+yahoo+yahoo2+yahoo3+'\n'
 		+'</head>\n'
-		+'<body lang="'+lang+'" style="margin: 0 auto !important; padding: 0 !important;background-color: '+bgColor+';">\n'
+		+'<body style="margin: 0 auto !important; padding: 0 !important;background-color: '+bgColor+';">\n'
 		+'  <div role="article" aria-roledescription="email" aria-label="'+title+'" lang="'+lang+'" dir="ltr" style="width: 100%;background-color:'+bgColor+'">\n'
 		+'      <!--[if (gte mso 9)|(IE)]>\n'
 		+'    <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: '+bgColor+';">\n'
