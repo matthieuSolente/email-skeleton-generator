@@ -91,7 +91,7 @@ function safe_tags_replace(str) {
 
 var component =[];
 var component_list = [];
-	var lang, title,preheader,width,bgColor,showHide,darkmodeMeta,darkmodeRoot,darkmodeCss, linkReset,one63,airmail,androidV23,applemail10,applemail12,applemail8,applemailipad,comcast,
+	var lang, title,preheader,width,bgColor,showHide,desktop,mobile,darkmodeMeta,darkmodeRoot,darkmodeCss, linkReset,one63,airmail,androidV23,applemail10,applemail12,applemail8,applemailipad,comcast,
 	edison,edisonandroid,edisonios,freenet,freenet2,gmail,gmailmobile,gmailandroid,ios10,
 	ios13,ios15,libero,newton,nine,notes,openxchange,outlook,outlookdark,
 	outlookmobile,outlookmobile2,outlookmac,outlookpwa,outlookweb,samsung4,samsung5,sapo,
@@ -109,6 +109,9 @@ function build_email() {
 		preheader=$('#preheader').val();
 		width=$('#width').val();
 		bgColor=$('#bgColor').val();
+		desktop=$('#desktop').val();
+		mobile=$('#mobile').val();
+
 
 		if($('#darkmode').is(':checked')){
 			darkmodeMeta = '<meta name="color-scheme" content="light dark">\n' 
@@ -127,20 +130,13 @@ function build_email() {
 		};
 		if($('#showHide').is(':checked')){
 			showHide ='<style id="showHide">\n'
-					+'.your-mobile-class {\n'
-					+'	display: none !important;\n'
-					+'	max-height: none !important;	\n'
-					+'	mso-hide: all !important;\n'
-					+'	height: 0 !important;\n'
-					+'}\n'
-					+'</style>\n'
-					+'<style>\n'
+					
 					+'@media screen and (max-width:'+width+'px) {\n'
-					+'	.your-desktop-class {\n'
+					+'	.'+desktop+' {\n'
 					+'  		display: none !important;\n'
 					+'  		height: 0 !important;\n'
 					+'	}\n'
-					+'	.your-mobile-class {\n'
+					+'	.'+mobile+' {\n'
 					+'	  display: block !important;\n'
 					+'	  width: auto !important;\n'
 					+'	  max-height: none !important;\n'
@@ -148,10 +144,12 @@ function build_email() {
 					+'	  height: 100% !important;\n'
 					+'	}\n'
 					+'}\n'
-					+'</style>\n'
+					+'</style>\n';
+					$('#showHideClass').show();
 
 		}else{
 				showHide = '';
+				$('#showHideClass').hide();
 		
 		};
 
