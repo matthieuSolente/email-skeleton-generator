@@ -135,7 +135,7 @@ function build_email() {
 					+'}\n'
 					+'</style>\n'
 					+'<style>\n'
-					+'@media screen and (max-width:'+width+') {\n'
+					+'@media screen and (max-width:'+width+'px) {\n'
 					+'	.your-desktop-class {\n'
 					+'  		display: none !important;\n'
 					+'  		height: 0 !important;\n'
