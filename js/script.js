@@ -91,7 +91,7 @@ function safe_tags_replace(str) {
 
 var component =[];
 var component_list = [];
-	var lang, title,preheader,width,bgColor,showHide,desktop,mobile,darkmodeMeta,darkmodeRoot,darkmodeCss, linkReset,one63,airmail,androidV23,applemail10,applemail12,applemail8,applemailipad,comcast,
+	var lang, title,preheader,width,bgColor,showHide,desktop,mobile,darkmodeMeta,darkmodeRoot,darkmodeCss, linkReset,janimation,one63,airmail,androidV23,applemail10,applemail12,applemail8,applemailipad,comcast,
 	edison,edisonandroid,edisonios,freenet,freenet2,gmail,gmailmobile,gmailandroid,ios10,
 	ios13,ios15,libero,newton,nine,notes,openxchange,outlook,outlookdark,
 	outlookmobile,outlookmobile2,outlookmac,outlookpwa,outlookweb,samsung4,samsung5,sapo,
@@ -200,6 +200,17 @@ function build_email() {
 			}else{
 			linkReset = '';
 		};
+		if($('#janimation').is(':checked')){
+			janimation='<style>\n'
+						+'[data-markjs]{\n'
+						+'  color:inherit;\n'
+						+'  padding:0;\n'
+						+'  background:none;\n'
+						+'}\n'
+						+'</style>\n'
+		}else{
+			janimation='';
+		}
 
 		if($('#one63').is(':checked')){
 			one63  ='<style>\n'
@@ -761,7 +772,7 @@ function build_email() {
 		+'  mso-table-rspace: 0;\n'
 		+'}\n'
 		+'</style>\n'
-		+''+darkmodeCss+linkReset+showHide+one63+airmail+androidV23+applemail10+applemail12+applemail8+applemailipad+comcast+edison+edisonandroid+edisonios+freenet+freenet2+gmail+gmailmobile+gmailandroid+ios10+ios13+ios15+libero+newton+nine+notes+openxchange+outlook+outlookdark+outlookmobile+outlookmobile2+outlookmac+outlookpwa+outlookweb+samsung4+samsung5+sapo+seznam+spark+sparkapps+superhuman+thunderbird+windowsphone+windowsphone2+yahoo+yahoo2+yahoo3+'\n'
+		+''+darkmodeCss+linkReset+showHide+janimation+one63+airmail+androidV23+applemail10+applemail12+applemail8+applemailipad+comcast+edison+edisonandroid+edisonios+freenet+freenet2+gmail+gmailmobile+gmailandroid+ios10+ios13+ios15+libero+newton+nine+notes+openxchange+outlook+outlookdark+outlookmobile+outlookmobile2+outlookmac+outlookpwa+outlookweb+samsung4+samsung5+sapo+seznam+spark+sparkapps+superhuman+thunderbird+windowsphone+windowsphone2+yahoo+yahoo2+yahoo3+'\n'
 		+'</head>\n'
 		+'<body style="margin: 0 auto !important; padding: 0 !important;background-color: '+bgColor+';">\n'
 		+'  <div role="article" aria-roledescription="email" aria-label="'+title+'" lang="'+lang+'" dir="ltr" style="width: 100%;background-color:'+bgColor+'">\n'
