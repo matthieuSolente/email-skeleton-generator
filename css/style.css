@@ -819,8 +819,12 @@ background: #fff;
 input[type="checkbox"]:checked {
 background: #00ed64;
 }
+@media screen and (min-width:768px) {
 .h-100{
 	height:100%;
+	position:sticky;
+	top:0;
+}
 }
 aside{
 display:-webkit-box;
@@ -922,8 +926,4 @@ color:#111111;
 }
 #target div{
 display:none;
-}
-aside{
-position:sticky;
-top:0;
 }
