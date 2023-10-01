@@ -46,22 +46,21 @@ function copyPaste(element) {
 		'outlookdark' : $('#target25'),
 		'outlookmobile' : $('#target26'),
 		'outlookmobile2' : $('#target27'),
-		'outlookmac' : $('#target28'),
-		'outlookpwa' : $('#target29'),
-		'outlookweb' : $('#target30'),
-		'postbox' : $('#target31'),
-		'samsung4' : $('#target32'),
-		'samsung5' : $('#target33'),
-		'sapo' : $('#target34'),
-		'seznam' : $('#target35'),
-		'spark' : $('#target36'),
-		'sparkapps' : $('#target37'),
-		'superhuman' : $('#target38'),
-		'tonline' : $('#target39'),
-		'thunderbird' : $('#target40'),
-		'windowsphone' : $('#target41'),
-		'yahoo' : $('#target42'),
-		'yahoo2' : $('#target43'),
+		'outlookpwa' : $('#target28'),
+		'outlookweb' : $('#target29'),
+		'postbox' : $('#target30'),
+		'samsung4' : $('#target31'),
+		'samsung5' : $('#target32'),
+		'sapo' : $('#target33'),
+		'seznam' : $('#target34'),
+		'spark' : $('#target35'),
+		'sparkapps' : $('#target36'),
+		'superhuman' : $('#target37'),
+		'tonline' : $('#target38'),
+		'thunderbird' : $('#target39'),
+		'windowsphone' : $('#target40'),
+		'yahoo' : $('#target41'),
+		'yahoo2' : $('#target42'),
 
 	};
 
@@ -98,7 +97,7 @@ var component_list = [];
 	var lang, title,preheader,width,bgColor,showHide,desktop,mobile,darkmodeMeta,darkmodeRoot,darkmodeCss, linkReset,janimation,one63,airmail,androidV23,applemail10,applemail12,applemail8,applemailipad,comcast,
 	edison,edisonandroid,edisonios,freenet,freenet2,gmail,gmailmobile,gmailandroid,ios10,
 	ios13,ios15,libero,newton,nine,notes,openxchange,outlook,outlookdark,
-	outlookmobile,outlookmobile2,outlookmac,outlookpwa,outlookweb,postbox,samsung4,samsung5,sapo,
+	outlookmobile,outlookmobile2,outlookpwa,outlookweb,postbox,samsung4,samsung5,sapo,
 	seznam,spark,sparkapps,superhuman,tonline,thunderbird,windowsphone,yahoo,yahoo2;
 	
 
@@ -339,6 +338,7 @@ function build_email() {
 			+'#msgBody .your-class-name {\n'
 			+'  /* Replace this comment with your styles */\n'
 			+'}\n'
+			+'/*or*/\n'
 			+' meta ~ * .your-class-name {\n'
 			+' /* Replace this comment with your styles */\n'
 			+' }\n'
@@ -354,9 +354,8 @@ function build_email() {
 
 		if($('#gmail').is(':checked')){
 			gmail  = '<style>\n' 
-
 			+' u + .body .your-class-name {\n'
-			  +' /* Replace this comment with your styles */\n'
+			+' /* Replace this comment with your styles */\n'
 			+' }\n'
 			+' </style>\n'
 			}else{
@@ -368,7 +367,7 @@ function build_email() {
 			+' @media screen and (max-width: 480px) {\n'
 			+'  u + .body .gmailmobile {\n'
 			  +' /* Replace this comment with your styles */\n'
-			+' }\n'
+			  +' }\n'
 			+' }\n'
 			+' </style>\n'
 			}else{
@@ -546,15 +545,6 @@ function build_email() {
 			outlookmobile2 = '';       
 		};
 
-		if($('#outlookmac').is(':checked')){
-			outlookmac  = '<style>\n'
-			+'_:-webkit-full-screen, _::-webkit-full-page-media, _:future, :root body:not(.Singleton) .your-class-name {\n'
-			 +' /* Replace this comment with your styles */\n'
-			+' }\n'
-			+' </style>\n'
-			}else{
-			outlookmac = '';       
-		};
 
 		if($('#outlookpwa').is(':checked')){
 			outlookpwa  = '<style>\n'
@@ -790,7 +780,7 @@ function build_email() {
 		+'  mso-table-rspace: 0;\n'
 		+'}\n'
 		+'</style>\n'
-		+''+darkmodeCss+linkReset+showHide+janimation+one63+airmail+androidV23+applemail10+applemail12+applemail8+applemailipad+comcast+edison+edisonandroid+edisonios+freenet+gmail+gmailmobile+gmailandroid+ios10+ios13+ios15+libero+newton+nine+notes+openxchange+outlook+outlookdark+outlookmobile+outlookmobile2+outlookmac+outlookpwa+outlookweb+postbox+samsung4+samsung5+sapo+seznam+spark+sparkapps+superhuman+tonline+thunderbird+windowsphone+yahoo+yahoo2+'\n'
+		+''+darkmodeCss+linkReset+showHide+janimation+one63+airmail+androidV23+applemail10+applemail12+applemail8+applemailipad+comcast+edison+edisonandroid+edisonios+freenet+gmail+gmailmobile+gmailandroid+ios10+ios13+ios15+libero+newton+nine+notes+openxchange+outlook+outlookdark+outlookmobile+outlookmobile2+outlookpwa+outlookweb+postbox+samsung4+samsung5+sapo+seznam+spark+sparkapps+superhuman+tonline+thunderbird+windowsphone+yahoo+yahoo2+'\n'
 		+'</head>\n'
 		+'<body style="margin: 0 auto !important; padding: 0 !important;background-color: '+bgColor+';">\n'
 		+'  <div role="article" aria-roledescription="email" aria-label="'+title+'" lang="'+lang+'" dir="ltr" style="width: 100%;background-color:'+bgColor+'">\n'
