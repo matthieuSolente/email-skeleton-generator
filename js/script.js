@@ -527,7 +527,7 @@ function build_email() {
 
 		if($('#outlookmobile').is(':checked')){
 			outlookmobile  = '<style>\n'
-			+' .your-class-name\/\/\0{\n'
+			+' .your-class-name\\0{\n'
 			+' /* Replace this comment with your styles */\n'
 			+' }\n'
 			+' </style>\n'
