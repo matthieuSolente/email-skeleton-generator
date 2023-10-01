@@ -237,7 +237,7 @@ function build_email() {
 
 		if($('#androidV23').is(':checked')){
 			androidV23  = '<style>\n'
-			+'@media screen and (min-width:0\/0) {\n'
+			+'@media screen and (min-width:0\\0) {\n'
 		  	+'.your-class-name {\n'
 		    +' /* Replace this comment with your styles */\n'
 		  	+' }\n'
@@ -527,7 +527,7 @@ function build_email() {
 
 		if($('#outlookmobile').is(':checked')){
 			outlookmobile  = '<style>\n'
-			+' .your-class-name\/0{\n'
+			+' .your-class-name\/\/\0{\n'
 			+' /* Replace this comment with your styles */\n'
 			+' }\n'
 			+' </style>\n'
@@ -688,6 +688,10 @@ function build_email() {
 			+' _:-ms-input-placeholder, :root .your-class-name {\n'
 			  +' * Replace this comment with your styles */\n'
 			+' }\n'
+			+'/*or*/\n'
+			+'_:-ms-fullscreen, :root .your-class-name {\n'
+			+'  /* Replace this comment with your styles */\n'
+			+'}\n'
 			+' </style>\n'
 			}else{
 			windowsphone = '';       
