@@ -31,38 +31,38 @@ function copyPaste(element) {
 		'edisonandroid' : $('#target10'),
 		'edisonios' : $('#target11'),
 		'freenet' : $('#target12'),
-		'freenet2' : $('#target13'),
-		'gmail' : $('#target14'),
-		'gmailmobile' : $('#target15'),
-		'gmailandroid' :$('#target16'),
-		'ios10' : $('#target17'),
-		'ios13' : $('#target18'),
-		'ios15' : $('#target19'),
-		'libero' : $('#target20'),
-		'newton' : $('#target21'),
-		'nine' : $('#target22'),
-		'notes' : $('#target23'),
-		'openxchange' : $('#target24'),
-		'outlook' :  $('#target26'),
-		'outlookdark' : $('#target27'),
-		'outkmobile' : $('#target28'),
-		'outlookmobile2' : $('#target29'),
-		'outlookmac' : $('#target30'),
-		'outlookpwa' : $('#target31'),
-		'outlookweb' : $('#target32'),
-		'samsung4' : $('#target33'),
-		'samsung5' : $('#target34'),
-		'sapo' : $('#target35'),
-		'seznam' : $('#target36'),
-		'spark' : $('#target37'),
-		'sparkapps' : $('#target38'),
-		'Superhuman' : $('#target39'),
+		'gmail' : $('#target13'),
+		'gmailmobile' : $('#target14'),
+		'gmailandroid' :$('#target15'),
+		'ios10' : $('#target16'),
+		'ios13' : $('#target17'),
+		'ios15' : $('#target18'),
+		'libero' : $('#target19'),
+		'newton' : $('#target20'),
+		'nine' : $('#target21'),
+		'notes' : $('#target22'),
+		'openxchange' : $('#target23'),
+		'outlook' :  $('#target24'),
+		'outlookdark' : $('#target25'),
+		'outlookmobile' : $('#target26'),
+		'outlookmobile2' : $('#target27'),
+		'outlookmac' : $('#target28'),
+		'outlookpwa' : $('#target29'),
+		'outlookweb' : $('#target30'),
+		'postbox' : $('#target31'),
+		'samsung4' : $('#target32'),
+		'samsung5' : $('#target33'),
+		'sapo' : $('#target34'),
+		'seznam' : $('#target35'),
+		'spark' : $('#target36'),
+		'sparkapps' : $('#target37'),
+		'superhuman' : $('#target38'),
+		'tonline' : $('#target39'),
 		'thunderbird' : $('#target40'),
 		'windowsphone' : $('#target41'),
-		'windowsphone2' : $('#target42'),
-		'yahoo' : $('#target43'),
-		'yahoo2' : $('#target44'),
-		'yahoo3' : $('#target45')
+		'yahoo' : $('#target42'),
+		'yahoo2' : $('#target43'),
+
 	};
 
 
@@ -98,8 +98,8 @@ var component_list = [];
 	var lang, title,preheader,width,bgColor,showHide,desktop,mobile,darkmodeMeta,darkmodeRoot,darkmodeCss, linkReset,janimation,one63,airmail,androidV23,applemail10,applemail12,applemail8,applemailipad,comcast,
 	edison,edisonandroid,edisonios,freenet,freenet2,gmail,gmailmobile,gmailandroid,ios10,
 	ios13,ios15,libero,newton,nine,notes,openxchange,outlook,outlookdark,
-	outlookmobile,outlookmobile2,outlookmac,outlookpwa,outlookweb,samsung4,samsung5,sapo,
-	seznam,spark,sparkapps,superhuman,thunderbird,windowsphone,windowsphone2,yahoo,yahoo2,yahoo3,halfwidth,halfwidth2,onethird,twothird,onefourth;
+	outlookmobile,outlookmobile2,outlookmac,outlookpwa,outlookweb,postbox,samsung4,samsung5,sapo,
+	seznam,spark,sparkapps,superhuman,tonline,thunderbird,windowsphone,yahoo,yahoo2;
 	
 
 
@@ -238,9 +238,10 @@ function build_email() {
 
 		if($('#androidV23').is(':checked')){
 			androidV23  = '<style>\n'
-			+'@media screen and (min-width:0\0) {\n'
+			+'@media screen and (min-width:0\/0) {\n'
 		  	+'.your-class-name {\n'
 		    +' /* Replace this comment with your styles */\n'
+		  	+' }\n'
 		  	+' }\n'
 			+' </style>\n'
 			}else{
@@ -334,20 +335,22 @@ function build_email() {
 			+'body[marginwidth][marginheight] .your-class-name {\n'
 			  +' /* Replace this comment with your styles */\n'
 			+' }\n'
+			+'/*or*/\n'
+			+'#msgBody .your-class-name {\n'
+			+'  /* Replace this comment with your styles */\n'
+			+'}\n'
+			+' meta ~ * .your-class-name {\n'
+			+' /* Replace this comment with your styles */\n'
+			+' }\n'
+			+'/*or*/\n'
+			+'title ~ * .your-class-name {\n'
+			+' /* Replace this comment with your styles */\n'
+			+'}\n'
 			+' </style>\n'
 			}else{
 				freenet = '';       
 		};
 
-		if($('#freenet2').is(':checked')){
-			freenet2 = 	'<style>\n'
-			+' meta ~ * .your-class-name {\n'
-			  +' /* Replace this comment with your styles */\n'
-			+' }\n'
-			+' </style>\n'
-			}else{
-			freenet2 = '';       
-		};
 
 		if($('#gmail').is(':checked')){
 			gmail  = '<style>\n' 
@@ -469,43 +472,43 @@ function build_email() {
 		if($('#outlook').is(':checked')){
 			outlook  = '<style>\n'
 			+' <!--[if mso | ie]>\n'
-			+' <td>ALL OUTLOOK</td>\n'
+			+' ALL OUTLOOK\n'
 			+' <![endif]-->\n'
 
 			+' <!--[if mso 9]>\n'
-			+' <td>OUTLOOK 2000</td>\n'
+			+' OUTLOOK 2000\n'
 			+' <![endif]-->\n'
 
 			+' <!--[if  mso 10]>\n'
-			+' <td>OUTLOOK 2002</td>\n'
+			+' OUTLOOK 2002\n'
 			+' <![endif]-->\n'
 
 			+' <!--[if  mso 11]>\n'
-			+' <td>OUTLOOK 2003</td>\n'
+			+' OUTLOOK 2003\n'
 			+' <![endif]-->\n'
 
 			+' <!--[if mso 12 | mso 14 | mso 15 ]>\n'
-			+' <td>OUTLOOK 2007/10/13</td>\n'
+			+' OUTLOOK 2007/10/13\n'
 			+' <![endif]-->\n'
 
 			+' <!--[if mso 12]>\n'
-			+' <td>OUTLOOK 2007</td>\n'
+			+' OUTLOOK 2007\n'
 			+' <![endif]-->\n'
 
 			+' <!--[if mso 14]>\n'
-			+' <td>OUTLOOK 2010</td>\n'
+			+' OUTLOOK 2010\n'
 			+' <![endif]-->\n'
 
 			+' <!--[if mso 15]>\n'
-			+' <td>OUTLOOK 2013</td>\n'
+			+' OUTLOOK 2013\n'
 			+' <![endif]-->\n'
 
 			+' <!--[if mso 16]>\n'
-			+' <td>OUTLOOK 2016</td>\n'
+			+' OUTLOOK 2016\n'
 			+' <![endif]-->\n'
 
 			+' <!--[if mso 16]>\n'
-			+' <td>WINDOWS 10 MAIL</td>\n'
+			+' <td>WINDOWS 10 MAIL\n'
 			+' <![endif]-->\n'
 			+' }\n'
 			+' </style>\n'
@@ -516,7 +519,7 @@ function build_email() {
 		if($('#outlookdark').is(':checked')){
 			outlookdark  = '<style>\n'
 			+' [data-ogsc] .your-class-name {\n'
-			  +' /* Replace this comment with your styles */\n'
+			+' /* Replace this comment with your styles */\n'
 			+' }\n'
 			+' </style>\n'
 			}else{
@@ -525,8 +528,8 @@ function build_email() {
 
 		if($('#outlookmobile').is(':checked')){
 			outlookmobile  = '<style>\n'
-			+' .your-class-name\0{\n'
-			 +' /* Replace this comment with your styles */\n'
+			+' .your-class-name{\n'
+			+' /* Replace this comment with your styles */\n'
 			+' }\n'
 			+' </style>\n'
 			}else{
@@ -574,6 +577,15 @@ function build_email() {
 			}else{
 			outlookweb = '';       
 		};
+		if($('#postbox').is(':checked')){
+			postbox  = '<style>\n'
+			+' .moz-text-html .your-class-name {\n'
+			+' /* Replace this comment with your styles */\n'
+			+'}\n'
+			+' </style>\n'
+			}else{
+			postbox = '';       
+		};
 
 		if($('#samsung4').is(':checked')){
 			samsung4  = '<style>\n'
@@ -590,16 +602,18 @@ function build_email() {
 			+' meta ~ * .your-class-name {\n'
 			  +' /* Replace this comment with your styles */\n'
 			+' }\n'
-			+' </style>\n'
-			+' or\n'
-			+' #MessageViewBody {\n'
-			  +' /* Replace this comment with your styles */\n'
-			+' }\n'
-			+' </style>\n'
-			+' or\n'
-			+' .body > div > div > .wrapper .your-class-name {\n'
-			  +' /* Replace this comment with your styles */\n'
-			+' }\n'
+			+' /*or*/\n'
+			+' title ~ * .your-class-name {\n'
+			+' /* Replace this comment with your styles */\n'
+			+'}\n'
+			+' /*or*/\n'
+			+'#MessageViewBody {\n'
+			+'  /* Replace this comment with your styles */\n'
+			+'}\n'
+			+' /*or*/\n'
+			+'.body > div > div > .wrapper .your-class-name {\n'
+			+'  /* Replace this comment with your styles */\n'
+			+'}\n'
 			+' </style>\n'
 			}else{
 			samsung5 = '';       
@@ -648,11 +662,19 @@ function build_email() {
 		if($('#superhuman').is(':checked')){
 			superhuman  = '<style>\n'
 			+' .ShadowHTML .your-class-name {\n'
-			  +' /* Replace this comment with your styles */\n'
+			+' /* Replace this comment with your styles */\n'
 			+' }\n'
 			+' </style>\n'
 			}else{
 			superhuman = '';       
+		};
+		if($('#tonline').is(':checked')){
+			tonline  = '\n'
+			+'<!--[if tonline]> T-Online <![endif]-->\n'
+			+'<!--[if false]> T-Online <![endif]-->\n'
+			+'<!--[if !true]> T-Online <![endif]-->\n'
+			}else{
+			tonline = '';       
 		};
 
 		if($('#thunderbird').is(':checked')){
@@ -662,6 +684,10 @@ function build_email() {
 			    +' /* Replace this comment with your styles */\n'
 			+'   }\n'
 			+' }\n'
+			+'/*or*/\n'
+			+'.moz-text-html .your-class-name {\n'
+			+'  /* Replace this comment with your styles */\n'
+			+'}\n'
 			+' </style>\n'
 			}else{
 			thunderbird = '';       
@@ -677,14 +703,6 @@ function build_email() {
 			windowsphone = '';       
 		};
 
-		if($('#windowsphone2').is(':checked')){
-			windowsphone2  = '<style>\n'
-			+' _:-ms-fullscreen, :root .your-class-name {\n'
-			  +' /* Replace this comment with your styles */\n'
-			+' }</style>\n'
-			}else{
-			windowsphone2 = '';       
-		};
 		if($('#yahoo').is(':checked')){
 			yahoo  = '<style>\n'
 			+' .your-class-name {\n'
@@ -692,28 +710,24 @@ function build_email() {
 			+'   font-size: /* 50px */;\n'
 			+'   color: /* white */;\n'
 			+' }\n'
+			+'/*or*/\n'
+			+'.& .your-class-name {\n'
+			+'  /* Replace this comment with your styles */\n'
+			+'}\n'
 			+' </style>\n'
 			}else{
 			yahoo = '';       
 		};
 
-		if($('#yahoo2').is(':checked')){ 
-			yahoo2  = '<style>\n'
-			+' .&amp; .your-class-name {\n'
-			   +' /* Replace this comment with your styles */\n'
-			+' }\n'
-			+' </style>\n'
-			}else{
-			yahoo2 = '';       
-		};
 
-		if($('#yahoo3').is(':checked')){
-			yahoo3  = '<style>\n'
+		if($('#yahoo2').is(':checked')){
+			yahoo2  = '<style>\n'
 			+' .your-class-name { \n'
 			+'   background: red !yahoo \n'
-			+'}</style>\n'
+			+'} \n'
+			+'</style>\n'
 			}else{
-			yahoo3 = '';       
+			yahoo2 = '';       
 		}; 
 
 		/***********************************************/
@@ -776,7 +790,7 @@ function build_email() {
 		+'  mso-table-rspace: 0;\n'
 		+'}\n'
 		+'</style>\n'
-		+''+darkmodeCss+linkReset+showHide+janimation+one63+airmail+androidV23+applemail10+applemail12+applemail8+applemailipad+comcast+edison+edisonandroid+edisonios+freenet+freenet2+gmail+gmailmobile+gmailandroid+ios10+ios13+ios15+libero+newton+nine+notes+openxchange+outlook+outlookdark+outlookmobile+outlookmobile2+outlookmac+outlookpwa+outlookweb+samsung4+samsung5+sapo+seznam+spark+sparkapps+superhuman+thunderbird+windowsphone+windowsphone2+yahoo+yahoo2+yahoo3+'\n'
+		+''+darkmodeCss+linkReset+showHide+janimation+one63+airmail+androidV23+applemail10+applemail12+applemail8+applemailipad+comcast+edison+edisonandroid+edisonios+freenet+gmail+gmailmobile+gmailandroid+ios10+ios13+ios15+libero+newton+nine+notes+openxchange+outlook+outlookdark+outlookmobile+outlookmobile2+outlookmac+outlookpwa+outlookweb+postbox+samsung4+samsung5+sapo+seznam+spark+sparkapps+superhuman+tonline+thunderbird+windowsphone+yahoo+yahoo2+'\n'
 		+'</head>\n'
 		+'<body style="margin: 0 auto !important; padding: 0 !important;background-color: '+bgColor+';">\n'
 		+'  <div role="article" aria-roledescription="email" aria-label="'+title+'" lang="'+lang+'" dir="ltr" style="width: 100%;background-color:'+bgColor+'">\n'
