@@ -733,7 +733,7 @@ function build_email() {
 		
 
 		var code = '<!DOCTYPE html>\n'
-		+'<html lang="'+lang+'" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">\n'
+		+'<html lang="'+lang+'" dir="ltr" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">\n'
 		+'<head>\n'
 		+' <meta charset="utf-8">\n'
 		+'  <meta http-equiv="X-UA-Compatible" content="IE=edge">\n'
@@ -822,8 +822,8 @@ function build_email() {
 		+'      <td align="center" valign="top">\n'
 		+'      <![endif]-->\n'
 		+'            <!-- Email Body : BEGIN -->\n'
-		+'      <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin: auto;">\n'
-		+'      </table>\n'
+		+'      \n'
+		+'            <!-- Email Body : END -->\n'
 		+'      <!--[if (gte mso 9)|(IE)]>\n'
 		+'      </td>\n'
 		+'      </tr>\n'
