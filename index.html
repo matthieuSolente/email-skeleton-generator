@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="email, generator, html, css" />
     <link rel="stylesheet" type="text/css" href="css/style.css">
-   <title>Html Email Skeleton Editor</title>
+    <title>Html Email Skeleton Editor</title>
   </head>
   <body>
     <div class="wrapper">
@@ -15,282 +15,385 @@
         <div class="flex-row">
           <div class="flex-col-sm-3 h-100">
             <aside>
-               <h1>Online HTML Email Skeleton Editor</h1>
-              <div>
-                <label for="title">Title</label>
-                <input type="text" name="title" id="title" value="Mytitle">
-              </div>
-              <div>
-                <label for="preheader">Preheader</label>
-                <input type="text" name="preheader" id="preheader" value="my preheader">
-              </div>
-              <div>
-                <label for="lang">Lang</label>
-                <input type="text" name="lang" id="lang" value="en">
-              </div>
-              <div>
-                <label for="width">Width</label>
-                <input type="number" name="width" id="width" value="600">
-              </div>
-              <div>
-                <label  for="darkmode">Darkmode</label>
-                <div class="switch">
-                  <input type="checkbox" name="darkmode" id="darkmode">
+              <h1>Online HTML Email Skeleton Editor</h1>
+              <input id="tab-1" type="radio" name="tabs" tabindex="1" checked> 
+              <label class="lbl" for="tab-1" >General settings</label>  
+              <div id="inputs" class="accordion">
+                <div>
+                  <label for="title">Title</label>
+                  <input type="text" name="title" id="title" value="Mytitle">
+                </div>
+                <div>
+                  <label for="preheader">Preheader</label>
+                  <input type="text" name="preheader" id="preheader" value="my preheader">
+                </div>
+                <div>
+                  <label for="lang">Lang</label>
+                  <input type="text" name="lang" id="lang" value="en">
+                </div>
+                <div>
+                  <label for="width">Width</label>
+                  <input type="number" name="width" id="width" value="600">
+                </div>
+                <div>
+                  <label  for="darkmode">Darkmode</label>
+                  <div class="switch">
+                    <input type="checkbox" name="darkmode" id="darkmode">
+                  </div>
+                </div>
+                <div>
+                  <label for="linkReset">Link reset</label>
+                  <div class="switch">
+                    <input type="checkbox" name="linkReset" id="linkReset">
+                  </div>
+                </div>
+                <div>
+                  <label for="showHide">Show/Hide</label>
+                  <div class="switch">
+                    <input type="checkbox" name="showHide" id="showHide">
+                  </div>
+                </div>
+                <div id="showHideClass">
+                  <p><label for="desktop">Your Desktop Class</label>
+                    <input type="text" name="desktop" id="desktop" value="my-desktop-class">
+                  </p>
+                  <p><label for="mobile">Your Mobile Class</label>
+                    <input type="text" name="mobile" id="mobile" value="my-mobile-class">
+                  </p>
+                  <p><small><em>Don't forget to add display:none inline, on your mobile element</em></small></p>
+                </div>
+                <div>
+                  <label for="janimation">Reset Outlook "joyful animations"</label>
+                  <div class="switch">
+                    <input type="checkbox" name="janimation" id="janimation">
+                  </div>
+                </div>
+                <div>
+                  <div class="generator--row">
+                    <div class="generator--half-row">
+                      <label for="bgColor">Email Bg color</label>
+                      <input type="text" name="button background color" id="bgColor" value="#f2f2f2" data-coloris>
+                    </div>
+                    <div class="generator--half-row">
+                      <label for="contentAreaBgColor">Content Area Bgcolor</label>
+                      <input type="text" name="content area background color" id="contentAreaBgColor" value="#f2f2f2" data-coloris>
+                    </div>
+                  </div>
+                </div>
+                <div class="heading">How to target ?</div>
+                <select id="search">
+                  <option  value="">Choose your target</option>
+                  <option  value="one63">163.com (webmail)</option>
+                  <option  value="airmail">Airmail</option>
+                  <option  value="androidV23">Android 2.3</option>
+                  <option  value="applemail10">Apple Mail 10+</option>
+                  <option  value="applemail12">Apple Mail 12+</option>
+                  <option  value="applemail8">Apple Mail 8</option>
+                  <option  value="applemailipad">Apple Mail (iPad)</option>
+                  <option  value="comcast">Comcast (webmail)</option>
+                  <option  value="edison">Edison</option>
+                  <option  value="edisonandroid">Edison (Android)</option>
+                  <option  value="edisonios">Edison (iOS)</option>
+                  <option  value="freenet">Freenet</option>
+                  <option  value="gmail">Gmail</option>
+                  <option  value="gmailmobile">Gmail (mobile and web)</option>
+                  <option  value="gmailandroid">Gmail (Android)</option>
+                  <option  value="ios10">Apple mail iOS10+</option>
+                  <option  value="ios13">Apple mail iOS13+</option>
+                  <option  value="ios15">Apple mail iOS15+</option>
+                  <option  value="libero">Libero (webmail)</option>
+                  <option  value="newton">Newton (desktop)</option>
+                  <option  value="nine">Nine</option>
+                  <option  value="notes">Notes 8</option>
+                  <option  value="openxchange">Open-Xchange</option>
+                  <option  value="outlook">Windows Outlook</option>
+                  <option  value="outlookdark">Outlook (webmail & iOS dark modes)</option>
+                  <option  value="outlookmobile">Outlook (webmail, iOS & Android)</option>
+                  <option  value="outlookmobile2">Outlook(iOS, Android, Mac)</option>
+                  <option  value="outlookpwa">Outlook (PWA)</option>
+                  <option  value="outlookweb">Outlook (webmail)</option>
+                  <option  value="postbox">Postbox</option>
+                  <option  value="samsung4">Samsung Email (S4)</option>
+                  <option  value="samsung5">Samsung Email (S5–S9)</option>
+                  <option  value="sapo">Sapo</option>
+                  <option  value="seznam">Seznam.cz (webmail)</option>
+                  <option  value="spark">Spark</option>
+                  <option  value="sparkapps">Spark (iOS & Android)</option>
+                  <option  value="superhuman">Superhuman (mac)</option>
+                  <option  value="tonline">T-online.de</option>
+                  <option  value="thunderbird">Thunderbird</option>
+                  <option  value="windowsphone">Windows Mail (Phone & Surface)</option>
+                  <option  value="yahoo">Yahoo</option>
+                  <option  value="yahoo2">Yahoo & AOL</option>
+                </select>
+                <div id="target">
+                  <div id="target1">
+                    <label for="one63">163.com (webmail)</label>
+                    <input type="checkbox" type="checkbox "name="one63" id="one63">
+                  </div>
+                  <div id="target2">
+                    <label for="airmail">Airmail</label>
+                    <input type="checkbox" name="airmail" id="airmail">
+                  </div>
+                  <div id="target3">
+                    <label for="androidV23">Android 2.3</label>
+                    <input type="checkbox" name="androidV23" id="androidV23">
+                  </div>
+                  <div id="target4">
+                    <label for="applemail10">Apple Mail 10+</label>
+                    <input type="checkbox" name="Apple Mail 10+" id="applemail10">
+                  </div>
+                  <div id="target5">
+                    <label for="applemail12">Apple Mail 12+</label>
+                    <input type="checkbox" name="applemail12" id="applemail12">
+                  </div>
+                  <div id="target6">
+                    <label for="applemail8">Apple Mail 8</label>
+                    <input type="checkbox" name="applemail8" id="applemail8">
+                  </div>
+                  <div id="target7">
+                    <label for="applemailipad">Apple Mail (iPad)</label>
+                    <input type="checkbox" name="Apple Mail iPad" id="applemailipad">
+                  </div>
+                  <div id="target8">
+                    <label for="comcast">Comcast (webmail)</label>
+                    <input type="checkbox" name="Comcast (webmail)" id="comcast">
+                  </div>
+                  <div id="target9">
+                    <label for="edison">Edison</label>
+                    <input type="checkbox" name="edison" id="edison">
+                  </div>
+                  <div id="target10">
+                    <label for="edisonandroid">Edison (Android)</label>
+                    <input type="checkbox" name="edisonandroid" id="edisonandroid">
+                  </div>
+                  <div id="target11">
+                    <label for="edisonios">Edison (iOS)</label>
+                    <input type="checkbox" name="Edison iOS" id="edisonios">
+                  </div>
+                  <div id="target12">
+                    <label for="freenet">Freenet</label>
+                    <input type="checkbox" name="Freenet" id="freenet">
+                  </div>
+                  <div id="target13">
+                    <label for="gmail">Gmail</label>
+                    <input type="checkbox" name="Gmail" id="gmail">
+                  </div>
+                  <div id="target14">
+                    <label for="gmailmobile">Gmail (mobile and web)</label>
+                    <input type="checkbox" name="Gmail mobile" id="gmailmobile">
+                  </div>
+                  <div id="target15">
+                    <label for="gmailandroid">Gmail (Android)</label>
+                    <input type="checkbox" name="Gmail Android" id="gmailandroid">
+                  </div>
+                  <div id="target16">
+                    <label for="ios10">Apple mail iOS10+</label>
+                    <input type="checkbox" name="Apple mail iOS10+" id="ios10">
+                  </div>
+                  <div id="target17">
+                    <label for="ios13">Apple mail iOS13+</label>
+                    <input type="checkbox" name="Apple mail iOS13+" id="ios13">
+                  </div>
+                  <div id="target18">
+                    <label for="ios15">Apple mail iOS15+</label>
+                    <input type="checkbox" name="Apple mail iOS15+" id="ios15">
+                  </div>
+                  <div id="target19">
+                    <label for="libero">Libero (webmail)</label>
+                    <input type="checkbox" name="Libero (webmail)" id="libero">
+                  </div>
+                  <div id="target20">
+                    <label for="newton">Newton (desktop)</label>
+                    <input type="checkbox" name="Newton (desktop)" id="newton">
+                  </div>
+                  <div id="target21">
+                    <label for="nine">Nine</label>
+                    <input type="checkbox" name="Nine" id="nine">
+                  </div>
+                  <div id="target22">
+                    <label for="notes">Notes 8</label>
+                    <input type="checkbox" name="Notes 8" id="notes">
+                  </div>
+                  <div id="target23">
+                    <label for="openxchange">Open-Xchange</label>
+                    <input type="checkbox" name="Open-Xchange<" id="openxchange">
+                  </div>
+                  <div id="target24">
+                    <label for="outlook">Outlook Window</label>
+                    <input type="checkbox" name="outlook windows" id="outlook">
+                  </div>
+                  <div id="target25">
+                    <label for="outlookdark">Outlook (webmail & iOS dark modes)</label>
+                    <input type="checkbox" name="Outlook (webmail & iOS dark modes)" id="outlookdark">
+                  </div>
+                  <div id="target26">
+                    <label for="outlookmobile">Outlook(iOS, Android, Mac)</label>
+                    <input type="checkbox" name="Outlook(iOS, Android, Mac)" id="outlookmobile">
+                  </div>
+                  <div id="target27">
+                    <label for="outlookmobile2">Outlook(iOS, Android, Mac)</label>
+                    <input type="checkbox" name="Outlook(iOS, Android, Mac)" id="outlookmobile2">
+                  </div>
+                  <div id="target28">
+                    <label for="outlookpwa">Outlook (PWA)</label>
+                    <input type="checkbox" name="Outlook PWA" id="outlookpwa">
+                  </div>
+                  <div id="target29">
+                    <label for="outlookweb">Outlook (webmail)</label>
+                    <input type="checkbox" name="Outlook (webmail)" id="outlookweb">
+                  </div>
+                  <div id="target30">
+                    <label for="postbox">Postbox</label>
+                    <input type="checkbox" name="Postbox" id="postbox">
+                  </div>
+                  <div id="target31">
+                    <label for="samsung4">Samsung Email (S4)</label>
+                    <input type="checkbox" name="Samsung Email (S4)" id="samsung4">
+                  </div>
+                  <div id="target32">
+                    <label for="samsung5">Samsung Email (S5–S9)</label>
+                    <input type="checkbox" name="Samsung S5 and later" id="samsung5">
+                  </div>
+                  <div id="target33">
+                    <label for="sapo">Sapo</label>
+                    <input type="checkbox" name="Sapo" id="sapo">
+                  </div>
+                  <div id="target34">
+                    <label for="seznam">Seznam.cz (webmail)</label>
+                    <input type="checkbox" name="Seznam.cz (webmail)" id="seznam">
+                  </div>
+                  <div id="target35">
+                    <label for="spark">Spark</label>
+                    <input type="checkbox" name="Spark" id="spark">
+                  </div>
+                  <div id="target36">
+                    <label for="sparkapps">Spark (iOS & Android)</label>
+                    <input type="checkbox" name="Spark (iOS & Android)" id="sparkapps">
+                  </div>
+                  <div id="target37">
+                    <label for="superhuman">Superhuman (mac)</label>
+                    <input type="checkbox" name="Superhuman (mac)" id="superhuman">
+                  </div>
+                  <div id="target38">
+                    <label for="tonline">T-online.de</label>
+                    <input type="checkbox" name="tonline" id="tonline">
+                  </div>
+                  <div id="target39">
+                    <label for="thunderbird">Thunderbird</label>
+                    <input type="checkbox" name="Thunderbird" id="thunderbird">
+                  </div>
+                  <div id="target40">
+                    <label for="windowsphone">Windows Mail (Phone & Surface)</label>
+                    <input type="checkbox" name="Windows Phone & Surface (ms-fullscreen)" id="windowsphone">
+                  </div>
+                  <div id="target41">
+                    <label for="yahoo">Yahoo</label>
+                    <input type="checkbox" name="Yahoo" id="yahoo">
+                  </div>
+                  <div id="target42">
+                    <label for="yahoo2">Yahoo & AOL</label>
+                    <input type="checkbox" name="Yahoo & AOL" id="yahoo2">
+                  </div>
                 </div>
               </div>
-              <div>
-                <label for="linkReset">Link reset</label>
-                <div class="switch">
-                  <input type="checkbox" name="linkReset" id="linkReset">
+              <input id="tab-2" type="radio" name="tabs" tabindex="2"> 
+              <label class="lbl" for="tab-2" >Create your structure</label>
+              <div class="accordion">
+                <div id="component-filter">
+                  <button type="button" class="component" id="add-one-row">
+                    <p>One-column</p>
+                    <div class="components">
+                      <div class="component-one-column">
+                        <div class="component-inner"></div>
+                      </div>
+                    </div>
+                  </button>
+                  <button type="button" class="component" id="add-two-columns">
+                    <p>Two-column</p>
+                    <div class="components">
+                      <div class="component-two-column">
+                        <div class="component-inner"></div>
+                      </div>
+                      <div class="component-two-column">
+                        <div class="component-inner"></div>
+                      </div>
+                    </div>
+                  </button>
+                  <button type="button" class="component" id="add-one-third-columns">
+                    <p>One third</p>
+                    <div class="components">
+                      <div class="component-one-column">
+                        <div class="component-inner"></div>
+                      </div>
+                      <div class="component-two-column">
+                        <div class="component-inner"></div>
+                      </div>
+                    </div>
+                  </button>
+                  <button type="button" class="component" id="add-two-third-columns">
+                    <p>Two third</p>
+                    <div class="components">
+                      <div class="component-two-column">
+                        <div class="component-inner"></div>
+                      </div>
+                      <div class="component-one-column">
+                        <div class="component-inner"></div>
+                      </div>
+                    </div>
+                  </button>
+                  <button type="button" class="component" id="add-three-columns">
+                    <p>Three-column</p>
+                    <div class="components">
+                      <div class="component-three-column">
+                        <div class="component-inner"></div>
+                      </div>
+                      <div class="component-three-column">
+                        <div class="component-inner"></div>
+                      </div>
+                      <div class="component-three-column">
+                        <div class="component-inner"></div>
+                      </div>
+                    </div>
+                  </button>
+                  <button type="button" class="component" id="add-four-columns-one">
+                    <p>four-column</p>
+                    <div class="components">
+                      <div class="component-four-column-one">
+                        <div class="component-inner"></div>
+                      </div>
+                      <div class="component-four-column-one">
+                        <div class="component-inner"></div>
+                      </div>
+                      <div class="component-four-column-one">
+                        <div class="component-inner"></div>
+                      </div>
+                      <div class="component-four-column-one">
+                        <div class="component-inner"></div>
+                      </div>
+                    </div>
+                  </button>
+                  <button type="button" class="component" id="add-four-columns-two">
+                    <p>four-column 2</p>
+                    <div class="components">
+                      <div class="component-four-column-two">
+                        <div class="component-inner"></div>
+                      </div>
+                      <div class="component-four-column-two">
+                        <div class="component-inner"></div>
+                      </div>
+                      <div class="component-four-column-two">
+                        <div class="component-inner"></div>
+                      </div>
+                      <div class="component-four-column-two">
+                        <div class="component-inner"></div>
+                      </div>
+                    </div>
+                  </button>
                 </div>
+                <div id="desktop" class="desktop"></div>
               </div>
-               <div>
-                <label for="showHide">Show/Hide</label>
-                <div class="switch">
-                  <input type="checkbox" name="showHide" id="showHide">
-                </div>
-              </div>
-            
-              <div id="showHideClass">
-                <p><label for="desktop">Your Desktop Class</label>
-                <input type="text" name="desktop" id="desktop" value="my-desktop-class"></p>
-                <p><label for="mobile">Your Mobile Class</label>
-                <input type="text" name="mobile" id="mobile" value="my-mobile-class"></p>
-                <p><small><em>Don't forget to add display:none inline, on your mobile element</em></small></p>
-              </div>
-              <div>
-                <label for="janimation">Reset Outlook "joyful animations"</label>
-                <div class="switch">
-                  <input type="checkbox" name="janimation" id="janimation">
-                </div>
-              </div>
-
-              
-              <div>
-                <label for="bgColor">Background color</label>
-                <input type="text" name="button-background-color" id="bgColor" value="#f2f2f2" data-coloris>
-              </div>
-              <div class="heading">How to target ?</div>
-              <select id="search">
-                <option  value="">Choose your target</option>
-                <option  value="one63">163.com (webmail)</option>
-                <option  value="airmail">Airmail</option>
-                <option  value="androidV23">Android 2.3</option>
-                <option  value="applemail10">Apple Mail 10+</option>
-                <option  value="applemail12">Apple Mail 12+</option>
-                <option  value="applemail8">Apple Mail 8</option>
-                <option  value="applemailipad">Apple Mail (iPad)</option>
-                <option  value="comcast">Comcast (webmail)</option>
-                <option  value="edison">Edison</option>
-                <option  value="edisonandroid">Edison (Android)</option>
-                <option  value="edisonios">Edison (iOS)</option>
-                <option  value="freenet">Freenet</option>
-                <option  value="gmail">Gmail</option>
-                <option  value="gmailmobile">Gmail (mobile and web)</option>
-                <option  value="gmailandroid">Gmail (Android)</option>
-                <option  value="ios10">Apple mail iOS10+</option>
-                <option  value="ios13">Apple mail iOS13+</option>
-                <option  value="ios15">Apple mail iOS15+</option>
-                <option  value="libero">Libero (webmail)</option>
-                <option  value="newton">Newton (desktop)</option>
-                <option  value="nine">Nine</option>
-                <option  value="notes">Notes 8</option>
-                <option  value="openxchange">Open-Xchange</option>
-                <option  value="outlook">Windows Outlook</option>
-                <option  value="outlookdark">Outlook (webmail & iOS dark modes)</option>
-                <option  value="outlookmobile">Outlook (webmail, iOS & Android)</option>
-                <option  value="outlookmobile2">Outlook(iOS, Android, Mac)</option>
-                <option  value="outlookpwa">Outlook (PWA)</option>
-                <option  value="outlookweb">Outlook (webmail)</option>
-                <option  value="postbox">Postbox</option>
-                <option  value="samsung4">Samsung Email (S4)</option>
-                <option  value="samsung5">Samsung Email (S5–S9)</option>
-                <option  value="sapo">Sapo</option>
-                <option  value="seznam">Seznam.cz (webmail)</option>
-                <option  value="spark">Spark</option>
-                <option  value="sparkapps">Spark (iOS & Android)</option>
-                <option  value="superhuman">Superhuman (mac)</option>
-                <option  value="tonline">T-online.de</option>
-                <option  value="thunderbird">Thunderbird</option>
-                <option  value="windowsphone">Windows Mail (Phone & Surface)</option>
-                <option  value="yahoo">Yahoo</option>
-                <option  value="yahoo2">Yahoo & AOL</option>
-              </select>
-              <div id="target">
-                <div id="target1">
-                  <label for="one63">163.com (webmail)</label>
-                  <input type="checkbox" type="checkbox "name="one63" id="one63">
-                </div>
-                <div id="target2">
-                  <label for="airmail">Airmail</label>
-                  <input type="checkbox" name="airmail" id="airmail">
-                </div>
-                <div id="target3">
-                  <label for="androidV23">Android 2.3</label>
-                  <input type="checkbox" name="androidV23" id="androidV23">
-                </div>
-                <div id="target4">
-                  <label for="applemail10">Apple Mail 10+</label>
-                  <input type="checkbox" name="Apple Mail 10+" id="applemail10">
-                </div>
-                <div id="target5">
-                  <label for="applemail12">Apple Mail 12+</label>
-                  <input type="checkbox" name="applemail12" id="applemail12">
-                </div>
-                <div id="target6">
-                  <label for="applemail8">Apple Mail 8</label>
-                  <input type="checkbox" name="applemail8" id="applemail8">
-                </div>
-                <div id="target7">
-                  <label for="applemailipad">Apple Mail (iPad)</label>
-                  <input type="checkbox" name="Apple Mail iPad" id="applemailipad">
-                </div>
-                <div id="target8">
-                  <label for="comcast">Comcast (webmail)</label>
-                  <input type="checkbox" name="Comcast (webmail)" id="comcast">
-                </div>
-                <div id="target9">
-                  <label for="edison">Edison</label>
-                  <input type="checkbox" name="edison" id="edison">
-                </div>
-                <div id="target10">
-                  <label for="edisonandroid">Edison (Android)</label>
-                  <input type="checkbox" name="edisonandroid" id="edisonandroid">
-                </div>
-                <div id="target11">
-                  <label for="edisonios">Edison (iOS)</label>
-                  <input type="checkbox" name="Edison iOS" id="edisonios">
-                </div>
-                <div id="target12">
-                  <label for="freenet">Freenet</label>
-                  <input type="checkbox" name="Freenet" id="freenet">
-                </div>
-                <div id="target13">
-                  <label for="gmail">Gmail</label>
-                  <input type="checkbox" name="Gmail" id="gmail">
-                </div>
-                <div id="target14">
-                  <label for="gmailmobile">Gmail (mobile and web)</label>
-                  <input type="checkbox" name="Gmail mobile" id="gmailmobile">
-                </div>
-                <div id="target15">
-                  <label for="gmailandroid">Gmail (Android)</label>
-                  <input type="checkbox" name="Gmail Android" id="gmailandroid">
-                </div>
-                <div id="target16">
-                  <label for="ios10">Apple mail iOS10+</label>
-                  <input type="checkbox" name="Apple mail iOS10+" id="ios10">
-                </div>
-                <div id="target17">
-                  <label for="ios13">Apple mail iOS13+</label>
-                  <input type="checkbox" name="Apple mail iOS13+" id="ios13">
-                </div>
-                <div id="target18">
-                  <label for="ios15">Apple mail iOS15+</label>
-                  <input type="checkbox" name="Apple mail iOS15+" id="ios15">
-                </div>
-                <div id="target19">
-                  <label for="libero">Libero (webmail)</label>
-                  <input type="checkbox" name="Libero (webmail)" id="libero">
-                </div>
-                <div id="target20">
-                  <label for="newton">Newton (desktop)</label>
-                  <input type="checkbox" name="Newton (desktop)" id="newton">
-                </div>
-                <div id="target21">
-                  <label for="nine">Nine</label>
-                  <input type="checkbox" name="Nine" id="nine">
-                </div>
-                <div id="target22">
-                  <label for="notes">Notes 8</label>
-                  <input type="checkbox" name="Notes 8" id="notes">
-                </div>
-                <div id="target23">
-                  <label for="openxchange">Open-Xchange</label>
-                  <input type="checkbox" name="Open-Xchange<" id="openxchange">
-                </div>
-              
-                 <div id="target24">
-                  <label for="outlook">Outlook Window</label>
-                  <input type="checkbox" name="outlook windows" id="outlook">
-                </div>
-                <div id="target25">
-                  <label for="outlookdark">Outlook (webmail & iOS dark modes)</label>
-                  <input type="checkbox" name="Outlook (webmail & iOS dark modes)" id="outlookdark">
-                </div>
-                <div id="target26">
-                  <label for="outlookmobile">Outlook(iOS, Android, Mac)</label>
-                  <input type="checkbox" name="Outlook(iOS, Android, Mac)" id="outlookmobile">
-                </div>
-                <div id="target27">
-                  <label for="outlookmobile2">Outlook(iOS, Android, Mac)</label>
-                  <input type="checkbox" name="Outlook(iOS, Android, Mac)" id="outlookmobile2">
-                </div>
-                <div id="target28">
-                  <label for="outlookpwa">Outlook (PWA)</label>
-                  <input type="checkbox" name="Outlook PWA" id="outlookpwa">
-                </div>
-                <div id="target29">
-                  <label for="outlookweb">Outlook (webmail)</label>
-                  <input type="checkbox" name="Outlook (webmail)" id="outlookweb">
-                </div>
-                 <div id="target30">
-                  <label for="postbox">Postbox</label>
-                  <input type="checkbox" name="Postbox" id="postbox">
-                </div>
-
-                <div id="target31">
-                  <label for="samsung4">Samsung Email (S4)</label>
-                  <input type="checkbox" name="Samsung Email (S4)" id="samsung4">
-                </div>
-                <div id="target32">
-                  <label for="samsung5">Samsung Email (S5–S9)</label>
-                  <input type="checkbox" name="Samsung S5 and later" id="samsung5">
-                </div>
-                <div id="target33">
-                  <label for="sapo">Sapo</label>
-                  <input type="checkbox" name="Sapo" id="sapo">
-                </div>
-                <div id="target34">
-                  <label for="seznam">Seznam.cz (webmail)</label>
-                  <input type="checkbox" name="Seznam.cz (webmail)" id="seznam">
-                </div>
-                <div id="target35">
-                  <label for="spark">Spark</label>
-                  <input type="checkbox" name="Spark" id="spark">
-                </div>
-                <div id="target36">
-                  <label for="sparkapps">Spark (iOS & Android)</label>
-                  <input type="checkbox" name="Spark (iOS & Android)" id="sparkapps">
-                </div>
-                <div id="target37">
-                  <label for="superhuman">Superhuman (mac)</label>
-                  <input type="checkbox" name="Superhuman (mac)" id="superhuman">
-                </div>
-                 <div id="target38">
-                  <label for="tonline">T-online.de</label>
-                  <input type="checkbox" name="tonline" id="tonline">
-                </div>
-                <div id="target39">
-                  <label for="thunderbird">Thunderbird</label>
-                  <input type="checkbox" name="Thunderbird" id="thunderbird">
-                </div>
-                <div id="target40">
-                  <label for="windowsphone">Windows Mail (Phone & Surface)</label>
-                  <input type="checkbox" name="Windows Phone & Surface (ms-fullscreen)" id="windowsphone">
-                </div>
-                <div id="target41">
-                  <label for="yahoo">Yahoo</label>
-                  <input type="checkbox" name="Yahoo" id="yahoo">
-                </div>
-                <div id="target42">
-                  <label for="yahoo2">Yahoo & AOL</label>
-                  <input type="checkbox" name="Yahoo & AOL" id="yahoo2">
-                </div>
-              </div>
-             
-                 <p>© Matthieu Solente <span id="year"></span> View on Github <a href="https://github.com/matthieuSolente/email-skeleton-generator"><img src="https://github.com/matthieuSolente/email-skeleton-generator/blob/main/img/github-mark.png?raw=true" alt="my github page" style="width:20px"></a></p>
-              
+              <p class="copyright">© Matthieu Solente <span id="year"></span> View on Github <a href="https://github.com/matthieuSolente/email-skeleton-generator"><img src="https://github.com/matthieuSolente/email-skeleton-generator/blob/main/img/github-mark.png?raw=true" alt="my github page" style="width:20px"></a></p>
             </aside>
           </div>
           <div class="flex-col-sm-9 grey">
@@ -302,9 +405,9 @@
         </div>
       </div>
     </div>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script type="text/javascript" src="js/coloris.js"></script>
-    <script type="text/javascript" src="js/script.js"></script>
+    <script src="js/jquery.dad.js"></script>  
+    <script src="js/coloris.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>
