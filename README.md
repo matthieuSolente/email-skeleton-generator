@@ -13,8 +13,13 @@ You also have the option to:
 - define the preheader text
 - define the language of the document (repeated on html tag and wrapping div)
 - define the general width of the template
-- define the template background color (repeated in three place (body, wrapping div and wrapping table for Outlook)
-
+- define the template background color (repeated in three place (body, wrapping div and wrapping table for Outlook) and the content area background color as well.
 
 
 A selection field allows you to select the clients and messaging platforms for which CSS targeting is possible. The information is pulled from the website [howtotargetemail](https://www.howtotarget.email/): _a collection of participatory email development techniques to distinguish customers and email platforms based on Mark Robbins' research._
+
+In the structure panel, you can create the structure of your email : one to four columns with two options for the four columns :50% or 100% width columns on mobile.
+
+Once edited, you just need to add content!
+
+Tested on more than 80 email clients/supports (Testi.at)
