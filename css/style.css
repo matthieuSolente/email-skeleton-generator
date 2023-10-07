@@ -38,7 +38,7 @@ h1{
   color:#000;
 }
 .lbl{
-  background: #ceaad7;
+  background: #b467c7;
 -webkit-background-clip: text;
 -webkit-text-fill-color: transparent;
 }
@@ -629,7 +629,6 @@ input.clr-color:focus {
    -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
            box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
 }
-/* line 122, ../sass/layout/_app.scss */
 .desktop .component:active {
    position: relative;
    -webkit-box-shadow: 0 0 0 rgba(0, 0, 0, 0.1);
@@ -638,7 +637,6 @@ input.clr-color:focus {
    -ms-transform: scale(0.97);
    transform: scale(0.97);
 }
-/* line 128, ../sass/layout/_app.scss */
 .desktop .component:active, .component:focus, .component:hover {
    outline: none;
 }
@@ -664,11 +662,9 @@ input.clr-color:focus {
    justify-content: space-between;
    position: relative;
 }
-/* line 154, ../sass/layout/_app.scss */
 .desktop .components:not(:last-child) {
    margin-bottom: 1px;
 }
-/* line 158, ../sass/layout/_app.scss */
 .desktop .components .delete-this {
    display: none;
    background: rgba(0, 0, 0, 0.4);
@@ -688,7 +684,6 @@ input.clr-color:focus {
    -ms-flex-align: center;
    align-items: center;
 }
-/* line 171, ../sass/layout/_app.scss */
 .desktop .components .delete-this .controls {
    display: none;
    color: #ffffff;
@@ -697,7 +692,6 @@ input.clr-color:focus {
    cursor: pointer;
    padding: 5px;
 }
-/* line 181, ../sass/layout/_app.scss */
 .desktop .components:hover .delete-this {
    display: -webkit-box;
    display: -ms-flexbox;
@@ -710,7 +704,7 @@ input.clr-color:focus {
    height: 40px;
    margin: auto;
    padding: 5px;
-   background: #f5f5dc;
+   background: #ceaad7;
 }
 /* 2 COLUMNS */
 .desktop .component-two-column {
@@ -718,7 +712,7 @@ input.clr-color:focus {
    width: 50%;
    height: 40px;
    padding: 5px;
-   background: #f5f5dc;
+   background: #ceaad7;
    -webkit-transition: all 0.2s ease-in-out;
    -o-transition: all 0.2s ease-in-out;
    transition: all 0.2s ease-in-out;
@@ -732,7 +726,7 @@ input.clr-color:focus {
    width: 33.3333333%;
    height: 40px;
    padding: 5px;
-   background: #f5f5dc;
+   background: #ceaad7;
    -webkit-transition: all 0.2s ease-in-out;
    -o-transition: all 0.2s ease-in-out;
    transition: all 0.2s ease-in-out;
@@ -746,7 +740,7 @@ input.clr-color:focus {
    width: 25%;
    height: 40px;
    padding: 5px;
-   background: #f5f5dc;
+   background: #ceaad7;
    -webkit-transition: all 0.2s ease-in-out;
    -o-transition: all 0.2s ease-in-out;
    transition: all 0.2s ease-in-out;
@@ -754,7 +748,6 @@ input.clr-color:focus {
 .desktop .component-four-column-one:not(:last-child), .desktop .component-four-column-two:not(:last-child){
    margin-right: 1px;
 }
-/* line 221, ../sass/layout/_app.scss */
 .desktop .component-two-third-column {
    border: 1px dashed #1b809e;
    width: 75%;
@@ -762,12 +755,11 @@ input.clr-color:focus {
    padding: 5px;
    margin-right: 1px;
    margin-left: 0;
-   background: #f5f5dc;
+   background: #ceaad7;
    -webkit-transition: all 0.2s ease-in-out;
    -o-transition: all 0.2s ease-in-out;
    transition: all 0.2s ease-in-out;
 }
-/* line 240, ../sass/layout/_app.scss */
 .desktop .component-one-third-column {
    border: 1px dashed #1b809e;
    width: 25%;
@@ -775,14 +767,14 @@ input.clr-color:focus {
    padding: 5px;
    margin-left: 1px;
    margin-right: 0;
-   background: #f5f5dc;
+   background: #ceaad7;
    -webkit-transition: all 0.2s ease-in-out;
    -o-transition: all 0.2s ease-in-out;
    transition: all 0.2s ease-in-out;
 }
 .desktop .component-inner {
    width: 100%;
-   border: 1px solid #1b809e;
+   border: 1px dashed #0f0b0b;
    height: 100%;
    background: #ffffff;
 }
@@ -915,7 +907,7 @@ gap: 8px;
 .accordion .component{  
 -ms-flex-preferred-size: 32%;  
     flex-basis: 32%;
-border: solid 1px #455065;
+border: solid 1px #b467c7;
   position: relative;
   font-size: 1rem;
   -webkit-box-shadow: none;
