@@ -18,7 +18,9 @@ You also have the option to:
 
 A selection field allows you to select the clients and messaging platforms for which CSS targeting is possible. The information is pulled from the website [howtotargetemail](https://www.howtotarget.email/): _a collection of participatory email development techniques to distinguish customers and email platforms based on Mark Robbins' research._
 
-In the structure panel, you can create the structure of your email : one to four columns with two options for the four columns :50% or 100% width columns on mobile.
+In the "create your structure" section, you have the possibility to draw the overall structure of your template.  One to four columns with two options for the four columns :50% or 100% width columns on mobile.
+
+Choose the columns to insert, then use the mouse to reorganize the arrangement of the columns via drag and drop, or delete unwanted columns by clicking on the cross icon.
 
 Once edited, you just need to add content!
 
