@@ -185,7 +185,7 @@ function safe_tags_replace(str) {
 /* **********************************************/	
 var lang,title,preheader,width,bgColor,showHide,
 desktop,mobile,darkmodeMeta,darkmodeRoot,darkmodeCss, 
-linkReset,janimation,one63,airmail,androidV23,applemail10,
+linkReset,janimation,layout,one63,airmail,androidV23,applemail10,
 applemail12,applemail8,applemailipad,comcast,edison,edisonandroid,
 edisonios,freenet,gmail,gmailmobile,gmailandroid,ios10,ios13,ios15,libero,
 newton,nine,notes,openxchange,outlook,outlookdark,outlookmobile,outlookmobile2,outlookpwa,
@@ -760,7 +760,39 @@ function build_email(all_components) {
 		+'</style>\n'
 		}else{
 		yahoo2 = '';       
-	}; 
+	};
+	if($('.desktop').html() !=''){
+		layout='\n'
++'<style id="layout">\n'
++' .cc-half {\n'
++' 	width: 100% !important;\n'
++' 	max-width: 50% !important;\n'
++' }\n'
++' .cc-one-third {\n'
++' 	width: 100% !important;\n'
++' 	max-width: 33.3% !important;\n'
++' }\n'
++' .cc-two-third {\n'
++' 	width: 100% !important;\n'
++' 	max-width: 66.6% !important;\n'
++' }\n'
++' .cc-fourth {\n'
++' 	width: 100% !important;\n'
++' 	max-width: 25% !important;\n'
++' }\n'
++' @media screen and (max-width:'+width+'px) {\n'
++' 	.cc-half,\n'
++' 	.cc-one-third,\n'
++' 	.cc-two-third,\n'
++' 	.cc-fourth {\n'
++'		width: 100% !important;\n'
++' 		max-width: '+width+'px !important;\n'
++'	}\n'
++' }\n'
++'</style>\n'
+	}else{
+		layout='';
+	}
 	/***********************************************/
 	/* Add code  */
 	/*******************************************/
@@ -1109,33 +1141,7 @@ function build_email(all_components) {
 +' 	mso-table-rspace: 0;\n'
 +'}\n'
 +'</style>\n'
-+'<style id="layout">\n'
-+' .cc-half {\n'
-+' 	width: 100% !important;\n'
-+' 	max-width: 50% !important;\n'
-+' }\n'
-+' .cc-one-third {\n'
-+' 	width: 100% !important;\n'
-+' 	max-width: 33.3% !important;\n'
-+' }\n'
-+' .cc-two-third {\n'
-+' 	width: 100% !important;\n'
-+' 	max-width: 66.6% !important;\n'
-+' }\n'
-+' .cc-fourth {\n'
-+' 	width: 100% !important;\n'
-+' 	max-width: 25% !important;\n'
-+' }\n'
-+' @media screen and (max-width:'+width+'px) {\n'
-+' 	.cc-half,\n'
-+' 	.cc-one-third,\n'
-+' 	.cc-two-third,\n'
-+' 	.cc-fourth {\n'
-+'		width: 100% !important;\n'
-+' 		max-width: '+width+'px !important;\n'
-+'	}\n'
-+' }\n'
-+'</style>\n'
++''+layout+'\n'
 +''+darkmodeCss+linkReset+showHide+janimation+one63+airmail+androidV23+applemail10+applemail12+applemail8+applemailipad+comcast+edison+edisonandroid+edisonios+freenet+gmail+gmailmobile+gmailandroid+ios10+ios13+ios15+libero+newton+nine+notes+openxchange+outlook+outlookdark+outlookmobile+outlookmobile2+outlookpwa+outlookweb+postbox+samsung4+samsung5+sapo+seznam+spark+sparkapps+superhuman+tonline+thunderbird+windowsphone+yahoo+yahoo2+'\n'
 +'</head>\n'
 +'<body style="margin: 0 auto !important; padding: 0 !important;background-color: '+bgColor+';">\n'
