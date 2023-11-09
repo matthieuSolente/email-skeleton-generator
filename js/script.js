@@ -1161,7 +1161,7 @@ function build_email(all_components) {
 +''+layout+'\n'
 +''+darkmodeCss+linkReset+showHide+janimation+one63+airmail+androidV23+applemail10+applemail12+applemail8+applemailipad+comcast+edison+edisonandroid+edisonios+freenet+gmail+gmailmobile+gmailandroid+ios10+ios13+ios15+libero+newton+nine+notes+openxchange+outlook+outlookdark+outlookmobile+outlookmobile2+outlookpwa+outlookweb+postbox+roundcube+samsung4+samsung5+sapo+seznam+spark+sparkapps+superhuman+tonline+thunderbird+windowsphone+yahoo+yahoo2+'\n'
 +'</head>\n'
-+'<body style="margin: 0 auto !important; padding: 0 !important;background-color: '+bgColor+';">\n'
++'<body style="margin: 0 auto !important; padding: 0 !important;word-spacing:normal;background-color: '+bgColor+';">\n'
 +' 	<div role="article" aria-roledescription="email" aria-label="'+title+'" lang="'+lang+'" dir="ltr" style="width: 100%;background-color:'+bgColor+'">\n'
 +' 	<!--[if (gte mso 9)|(IE)]><table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: '+bgColor+';"><tr><td><![endif]-->\n'
 +' 	<div style="display:none;max-height:0;overflow:hidden">'+preheader+'&#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847;\n'
