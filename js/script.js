@@ -39,32 +39,33 @@ $.viewMap = {
 'ios10' : $('#target16'),
 'ios13' : $('#target17'),
 'ios15' : $('#target18'),
-'libero' : $('#target19'),
-'newton' : $('#target20'),
-'nine' : $('#target21'),
-'notes' : $('#target22'),
-'openxchange' : $('#target23'),
-'outlook' :  $('#target24'),
-'outlookdark' : $('#target25'),
-'outlookmobile' : $('#target26'),
-'outlookmobile2' : $('#target27'),
-'outlookmac' : $('#target28'),
-'outlookpwa' : $('#target29'),
-'outlookweb' : $('#target30'),
-'postbox' : $('#target31'),
-'roundcube' : $('#target32'),
-'samsung4' : $('#target33'),
-'samsung5' : $('#target34'),
-'sapo' : $('#target35'),
-'seznam' : $('#target36'),
-'spark' : $('#target37'),
-'sparkapps' : $('#target38'),
-'superhuman' : $('#target39'),
-'tonline' : $('#target40'),
-'thunderbird' : $('#target41'),
-'windowsphone' : $('#target42'),
-'yahoo' : $('#target43'),
-'yahoo2' : $('#target44'),
+'ios17' : $('#target19'),
+'libero' : $('#target20'),
+'newton' : $('#target21'),
+'nine' : $('#target22'),
+'notes' : $('#target23'),
+'openxchange' : $('#target24'),
+'outlook' :  $('#target25'),
+'outlookdark' : $('#target26'),
+'outlookmobile' : $('#target27'),
+'outlookmobile2' : $('#target28'),
+'outlookmac' : $('#target29'),
+'outlookpwa' : $('#target30'),
+'outlookweb' : $('#target31'),
+'postbox' : $('#target32'),
+'roundcube' : $('#target33'),
+'samsung4' : $('#target34'),
+'samsung5' : $('#target35'),
+'sapo' : $('#target36'),
+'seznam' : $('#target37'),
+'spark' : $('#target38'),
+'sparkapps' : $('#target39'),
+'superhuman' : $('#target40'),
+'tonline' : $('#target41'),
+'thunderbird' : $('#target42'),
+'windowsphone' : $('#target43'),
+'yahoo' : $('#target44'),
+'yahoo2' : $('#target45'),
 };
 $('#search').change(function() {
 	$.each($.viewMap, function() { this.hide(); });
@@ -189,7 +190,7 @@ var lang,title,preheader,width,bgColor,showHide,
 desktop,mobile,darkmodeMeta,darkmodeRoot,darkmodeCss, 
 linkReset,janimation,layout,one63,airmail,androidV23,applemail10,
 applemail12,applemail8,applemailipad,comcast,edison,edisonandroid,
-edisonios,freenet,gmail,gmailmobile,gmailandroid,ios10,ios13,ios15,libero,
+edisonios,freenet,gmail,gmailmobile,gmailandroid,ios10,ios13,ios15,ios17,libero,
 newton,nine,notes,openxchange,outlook,outlookdark,outlookmobile,outlookmobile2,outlookmac,outlookpwa,
 outlookweb,postbox,roundcube,samsung4,samsung5,sapo,seznam,spark,sparkapps,superhuman,tonline,thunderbird,
 windowsphone,yahoo,yahoo2;
@@ -483,6 +484,20 @@ function build_email(all_components) {
 		+' </style>\n'
 		}else{
 		ios15 = '';       
+	};
+	if($('#ios17').is(':checked')){
+		ios17  = '<style>\n'
+		+'@supports(text-transform: full-width) {\n'
+    	+'@media screen and (max-width:9999px) and (-webkit-min-device-pixel-ratio: 0) {\n'
+      	+'	/* iOS 17 & MacOS Sonoma fallback */\n'
+      	+'	.your-class-name {\n'
+		+'   /* Replace this comment with your styles */\n'
+		+'  }\n'
+    	+'}\n'
+		+'}\n'
+		+' </style>\n'
+		}else{
+		ios17 = '';       
 	};
 	if($('#libero').is(':checked')){
 		libero  = '<style>\n'
@@ -1169,7 +1184,7 @@ function build_email(all_components) {
 +'}\n'
 +'</style>\n'
 +''+layout+'\n'
-+''+darkmodeCss+linkReset+showHide+janimation+one63+airmail+androidV23+applemail10+applemail12+applemail8+applemailipad+comcast+edison+edisonandroid+edisonios+freenet+gmail+gmailmobile+gmailandroid+ios10+ios13+ios15+libero+newton+nine+notes+openxchange+outlook+outlookdark+outlookmobile+outlookmobile2+outlookmac+outlookpwa+outlookweb+postbox+roundcube+samsung4+samsung5+sapo+seznam+spark+sparkapps+superhuman+tonline+thunderbird+windowsphone+yahoo+yahoo2+'\n'
++''+darkmodeCss+linkReset+showHide+janimation+one63+airmail+androidV23+applemail10+applemail12+applemail8+applemailipad+comcast+edison+edisonandroid+edisonios+freenet+gmail+gmailmobile+gmailandroid+ios10+ios13+ios15+ios17+libero+newton+nine+notes+openxchange+outlook+outlookdark+outlookmobile+outlookmobile2+outlookmac+outlookpwa+outlookweb+postbox+roundcube+samsung4+samsung5+sapo+seznam+spark+sparkapps+superhuman+tonline+thunderbird+windowsphone+yahoo+yahoo2+'\n'
 +'</head>\n'
 +'<body style="margin: 0 auto !important; padding: 0 !important;word-spacing:normal;background-color: '+bgColor+';">\n'
 +' 	<div role="article" aria-roledescription="email" aria-label="'+title+'" lang="'+lang+'" dir="ltr" style="width: 100%;background-color:'+bgColor+'">\n'
